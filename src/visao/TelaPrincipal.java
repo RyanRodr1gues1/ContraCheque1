@@ -204,12 +204,13 @@ public class TelaPrincipal extends javax.swing.JFrame {
         // TODO add your handling code here:
         
         try {
-            Funcionario calculo = new Funcionario();
-            calculo.setMatricula(Integer.parseInt(jTextFieldMatricula.getText()));
-            calculo.setNome(jTextFieldNome.getText());
-            calculo.setsalarioBase(Float.parseFloat(jTextFieldSalarioB.getText()));
-            calculo.setnumDeDependetes(Integer.parseInt(jTextFieldNumeroD.getText()));
-            calculo.setValorGp(Integer.parseInt(jTextFieldValorGP.getText()));
+           int Matricula = Integer.parseInt(jTextFieldMatricula.getText());
+           String Nome =jTextFieldNome.getText();
+           int numDeDependetes = Integer.parseInt(jTextFieldNumeroD.getText());
+           float salarioBase = Float.parseFloat(jTextFieldSalarioB.getText());
+           int ValorGp = Integer.parseInt(jTextFieldValorGP.getText());
+           
+         Funcionario calculo = new Funcionario(Matricula, Nome, numDeDependetes, salarioBase, ValorGp);
             
             String saida = "Contra cheque";
             saida += "Matricula: " +calculo.getMatricula() +"\n";

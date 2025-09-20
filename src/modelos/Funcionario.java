@@ -9,13 +9,27 @@ package modelos;
  * @author aluno
  */
 public class Funcionario {
+    //  atributos
     private int matricula = 0;
     private String nome = "";
     private int numDeDependetes = 0;
     private float salarioBase = 0;
     private int valorGp = 0;
     
-
+    
+// metodos
+public Funcionario(int matricula, String nome, int numDeDependentes, float salarioBase, int valorGp)throws Exception{
+    if(matricula < 0) throw new Exception("Matricula não pode ser menor que zero");
+    if(numDeDependentes < 0) throw new Exception("num. de dependentes não pode ser menor que zero");
+    if(salarioBase < 0) throw new Exception("salario base não pode ser menor que zero");
+    if(valorGp < 0) throw new Exception("ValorGp não pode ser menor que zero");
+    
+    this.matricula = matricula;
+    this.nome = nome;
+    this.numDeDependetes = numDeDependentes;
+    this.salarioBase = salarioBase;
+    this.valorGp = valorGp;
+}
     public int getMatricula() {
         return matricula;
     }
